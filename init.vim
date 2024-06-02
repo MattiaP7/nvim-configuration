@@ -20,6 +20,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'neanias/everforest-nvim', { 'branch': 'main' }
+Plug 'm4xshen/autoclose.nvim'
 
 set encoding=UTF-8
 
@@ -62,3 +63,32 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+
+" Lua configuration for autoclose.nvim
+lua << EOF
+local config = {
+   keys = {
+      ["("] = { escape = false, close = true, pair = "()" },
+      ["["] = { escape = false, close = true, pair = "[]" },
+      ["{"] = { escape = false, close = true, pair = "{}" },
+
+      [">"] = { escape = true, close = false, pair = "<>" },
+      [")"] = { escape = true, close = false, pair = "()" },
+      ["]"] = { escape = true, close = false, pair = "[]" },
+      ["}"] = { escape = true, close = false, pair = "{}" },
+
+      ['"'] = { escape = true, close = true, pair = '""' },
+      ["'"] = { escape = true, close = true, pair = "''" },
+      ["`"] = { escape = true, close = true, pair = "``" },
+   },
+   options = {
+      disabled_filetypes = { "text" },
+      disable_when_touch = false,
+      touch_regex = "[%w(%[{]",
+      pair_spaces = false,
+      auto_indent = true,
+      disable_command_mode = false,
+   },
+}
+require('autoclose').setup(config)
+EOF
