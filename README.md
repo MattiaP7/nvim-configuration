@@ -12,6 +12,6 @@
 
 ## Installation
 
-in your local directory search for the `nvim` folder ( if it doesn't exist, create it).
-Inside this folder create the init.vim file, and copy mine.
+in your ~/AppData/Local/ directory search for the `nvim` folder ( if it doesn't exist, create it).
+Inside this folder create the init.vim file, and copy mine ( before install vim-plug and then you can run :PlugInstall)
 For coc.nvim follow the installation guide of your language.
