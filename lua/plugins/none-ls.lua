@@ -9,6 +9,11 @@ return {
         null_ls.builtins.formatting.prettier,
 		
 		--diagnostic
+		null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.clang_format.with({
+            filetypes = { "c", "cpp", "objc", "objcpp" },
+            args = { "-style=file" }, -- Pass additional arguments if needed
+        }),
 	},
     })
 
