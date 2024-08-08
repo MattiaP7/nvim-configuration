@@ -16,6 +16,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities
@@ -27,7 +29,8 @@ return {
 				capabilities = capabilities
 			})
 			lspconfig.clangd.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
+				filetypes = {"c", "cpp", "h"}
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
