@@ -32,7 +32,6 @@ return {
         "cssls",
         "tailwindcss",
         "lua_ls",
-        "clangd",
         "emmet_ls",
         "pyright",
       },
@@ -44,7 +43,6 @@ return {
         "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
-		"clang-format"
       },
     })
   end,
