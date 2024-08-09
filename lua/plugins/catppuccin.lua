@@ -1,3 +1,4 @@
+-- Theme plugin
 return {
 	"catppuccin/nvim", 
 	name = "catppuccin", 

@@ -1,3 +1,5 @@
+-- Dashboard plugin
+
 return {
   "goolord/alpha-nvim",
   event = "VimEnter",
