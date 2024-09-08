@@ -25,7 +25,7 @@ return {
 		mason_lspconfig.setup({
 			-- lista di server da installare di default.
 			ensure_installed = {
-				"tsserver", -- javascript
+				"ts_ls", -- javascript
 				"html", -- html
 				"cssls", -- css
 				"tailwindcss", -- tailwind

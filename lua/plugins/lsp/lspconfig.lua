@@ -82,7 +82,7 @@ return {
 			"pyright",
 			"svelte",
 			"tailwindcss",
-			"tsserver",
+			"ts_ls",
 			"zls",
 		}
 
