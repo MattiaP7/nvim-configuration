@@ -19,6 +19,7 @@ return {
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			require("luasnip.loaders.from_vscode").lazy_load()
+			require("cmp_nvim_lsp_signature_help").new()
 
 			local kind_icons = {
 				Text = "",
@@ -57,7 +58,7 @@ return {
 					format = function(entry, vim_item)
 						-- Kind icons
 						vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind) -- This concatenates the icons with the name of the item kind
-						-- If you want have the source uncomment this line
+						-- If you don't want have the source uncomment this line
 						vim_item.menu = ({
 							buffer = "[Buffer]",
 							nvim_lsp = "[LSP]",

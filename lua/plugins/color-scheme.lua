@@ -9,14 +9,19 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {},
-		config = function()
-			vim.cmd.colorscheme("tokyonight-night")
-		end,
+	},
+	{
+		"Mofiqul/vscode.nvim",
+		lazy = false,
+		priority = 1000,
 	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("catppuccin")
+		end,
 	},
 	{
 		"marko-cerovac/material.nvim",

@@ -11,7 +11,7 @@ opt.smarttab = true
 opt.softtabstop = 2
 opt.mouse = "a"
 opt.cursorline = true
-
+opt.clipboard = "unnamedplus"
 g.mapleader = " "
 
 -- This is not the best place for this keymaps. in future there will be a special `mappings.lua`

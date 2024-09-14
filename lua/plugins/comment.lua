@@ -1,6 +1,10 @@
 return {
 	"numToStr/Comment.nvim",
 	opts = {
-		-- add any options here
+		padding = true,
+		toggler = {
+			line = "gcc", -- Line comment style
+			block = "gbc", -- Block comment style
+		},
 	},
 }
