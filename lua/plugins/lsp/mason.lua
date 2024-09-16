@@ -41,7 +41,7 @@ return {
 		})
 
 		mason_tool_installer.setup({
-			-- lista di formatter, linter, ... da installare di default
+			-- lista di formatter, linter, dapper da installare di default
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter

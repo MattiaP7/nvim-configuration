@@ -1,8 +1,8 @@
 -- Every colorscheme will be installed here
--- if you want to use a specific one, write under his installation:
+-- For a specifi colorscheme use:
 -- config = function()
---		vim.cmd.colorscheme "name"
--- end
+--	 vim.cmd.colorscheme("name")
+-- end,
 return {
 	{
 		"folke/tokyonight.nvim",
@@ -20,7 +20,7 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("catppuccin")
+			vim.cmd.colorscheme("catppuccin-macchiato")
 		end,
 	},
 	{

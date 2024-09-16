@@ -9,8 +9,8 @@ return {
 			as = "catppuccin",
 		},
 		config = function()
-			local builtin = require("telescope.builtin")
 			local telescope = require("telescope")
+			local builtin = require("telescope.builtin")
 			local actions = require("telescope.actions")
 
 			telescope.setup({

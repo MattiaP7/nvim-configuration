@@ -57,8 +57,7 @@ Segui questi passaggi per installare e configurare Neovim con questa configurazi
         │   (tutti i plugins qui dentro)
         │
         └───lsp
-            │   lspconfig.lua
-            │   mason.lua
+            │ (tutti i plugins per lsp)
             │
             └───language
                     (ogni config per i linguaggi qua dentro)
@@ -84,7 +83,9 @@ automaticamente dovrebbero partire i download dei plugin, per verificare il down
 > ricorda che per installare vim-doge, devi eseguire il comando: `:call doge#install()`
 
 > [!CAUTION]
-> Neovim come lsp per c++ utilizza "clangd". Se hai problemi con clangd, per esempio non trova gli header come "iostream", vai alla pagina guida [clangd](clangd.md) 4. **Lsp e Mason**
+> Neovim come lsp per c++ utilizza "clangd". Se hai problemi con clangd, per esempio non trova gli header come "iostream", vai alla pagina guida [clangd](clangd.md)
+
+4. **Lsp e Mason**
 
 - documentazione **<a href="https://github.com/williamboman/mason.nvim" target="_blank">Mason</a>**
 - documentazione **<a href="https://github.com/williamboman/mason-lspconfig.nvim" target="_blank">Mason-lspconfig</a>**
@@ -108,11 +109,19 @@ In questa configurazione sono stati creati dei keymaps per velocizzare il richia
 | :---------- | :---------------------------------------: |
 | leader + mp |             Formatta il file              |
 | Ctrl + n    | Apre il file system di neotree a sinistra |
+| Alt + n     |     Chiude il file system di neotree      |
 | Ctrl + p    |      Apre il trova file di telescope      |
 | Ctrl + fg   |      Apre il live grep di telescope       |
 | Ctrl + f    |     Apre il trova parole di telescope     |
 | Ctrl + f    |     Apre il trova parole di telescope     |
-| leader + th |             Apre il terminale             |
+| Ctrl + a    |          Seleziona il tutto file          |
+| Ctrl + c    |        Copia del testo selezionato        |
+| Ctrl + v    |       Incolla del testo selezionato       |
+| Ctrl + z    |    Torna indietro all'ultima modifica     |
+| Ctrl + y    |     Torna in avanti data una modifica     |
+| Ctrl + t    |             Apre il terminale             |
+| Alt + Up    |    Sposta una riga in su (freccia up)     |
+| Alt + down  | Sposta una riga in basso (freccia bassa)  |
 | leader + ca |       Apre il 'code action' di LSP        |
 
 <h4>SPECIALI PER LSP</h4>
