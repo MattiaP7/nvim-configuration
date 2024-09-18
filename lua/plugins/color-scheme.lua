@@ -1,8 +1,4 @@
 -- Every colorscheme will be installed here
--- For a specifi colorscheme use:
--- config = function()
---	 vim.cmd.colorscheme("name")
--- end,
 return {
 	{
 		"folke/tokyonight.nvim",
@@ -11,17 +7,24 @@ return {
 		opts = {},
 	},
 	{
-		"Mofiqul/vscode.nvim",
+		"dracula/vim",
 		lazy = false,
 		priority = 1000,
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		lazy = true,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		priority = 1000,
+		lazy = true,
 	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("catppuccin-macchiato")
-		end,
 	},
 	{
 		"marko-cerovac/material.nvim",

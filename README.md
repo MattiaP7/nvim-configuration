@@ -108,6 +108,7 @@ In questa configurazione sono stati creati dei keymaps per velocizzare il richia
 | Keymaps     |                Descrizione                |
 | :---------- | :---------------------------------------: |
 | leader + mp |             Formatta il file              |
+| leader + th |     Apre il theme switcher di themery     |
 | Ctrl + n    | Apre il file system di neotree a sinistra |
 | Alt + n     |     Chiude il file system di neotree      |
 | Ctrl + p    |      Apre il trova file di telescope      |
@@ -117,8 +118,6 @@ In questa configurazione sono stati creati dei keymaps per velocizzare il richia
 | Ctrl + a    |          Seleziona il tutto file          |
 | Ctrl + c    |        Copia del testo selezionato        |
 | Ctrl + v    |       Incolla del testo selezionato       |
-| Ctrl + z    |    Torna indietro all'ultima modifica     |
-| Ctrl + y    |     Torna in avanti data una modifica     |
 | Ctrl + t    |             Apre il terminale             |
 | Alt + Up    |    Sposta una riga in su (freccia up)     |
 | Alt + down  | Sposta una riga in basso (freccia bassa)  |

@@ -19,14 +19,7 @@ apk("v", "<A-Up>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 apk("n", "<A-Down>", ":m+1<CR>==", { noremap = true, silent = true })
 apk("v", "<A-Down>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 
--- Mappa Ctrl+Z per annullare
-apk("n", "<C-z>", "u", { noremap = true, silent = true })
-
--- Mappa Ctrl+Y per rifare
-apk("n", "<C-y>", "<C-r>", { noremap = true, silent = true })
-
 --Keymap plugin
-
 keymap("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {}) --Neotree
 keymap("n", "<A-n>", ":Neotree filesystem close<CR>", {})
 keymap("n", "<C-t>", ":ToggleTerm<CR>", {}) -- Toggleterm
