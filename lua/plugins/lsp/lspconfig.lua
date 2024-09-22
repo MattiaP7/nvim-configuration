@@ -11,8 +11,21 @@ return {
 		local lspconfig = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		require("nvim-lightbulb").setup({ autocmd = { enabled = true } })
 
 		local keymap = vim.keymap -- per brevità
+
+		keymap.set("n", "<C-n>", vim.diagnostic.goto_next, { desc = "Vai all'errore successivo" })
+		keymap.set("n", "<C-p>", vim.diagnostic.goto_prev, { desc = "Vai all'errore precedente" })
+
+		vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+			pattern = "*",
+			callback = function()
+				require("nvim-lightbulb").update_lightbulb()
+			end,
+		})
+		vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "DiagnosticSignError" })
+		vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticSignWarn" })
 
 		-- Configurazione degli autocomandi per LSP
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -23,6 +36,7 @@ return {
 				-- Configura i keybinds
 				opts.desc = "Show documentation for what is under cursor"
 				keymap.set("n", "K", vim.lsp.buf.hover, opts)
+				keymap.set("n", "<CR>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", {})
 
 				vim.api.nvim_set_keymap(
 					"n",
@@ -45,7 +59,6 @@ return {
 				keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 			end,
 		})
-
 		-- Abilita l'autocompletamento per ogni configurazione del server LSP
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 

@@ -102,8 +102,7 @@ Una volta installato il linguaggio creare nella cartella language/ un file con "
 
 In questa configurazione sono stati creati dei keymaps per velocizzare il richiamo delle funzioni, in seguito troverai una tabella con: keymaps | descrizione.
 
-> [!WARNING]
-> (tutti i keymaps sono eseguibili solo in normal mode). nota che "< leader >" nella mia configurazione è lo spazio. quando per esempio trovi "< leader >f" significa "spazio + f", "< C-f>" significa "ctrl+f". (devo fare degli spazi fra le < perche' markdown non capisce altrimenti...).
+leader = spazio
 
 | Keymaps     |                Descrizione                |
 | :---------- | :---------------------------------------: |
