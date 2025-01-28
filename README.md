@@ -1,6 +1,6 @@
 # Neovim Configuration per Windows
 
-Questa è una configurazione per Neovim creata per la programmazione di linguaggi: C / C++, html/css/js, python, zig. Questo documento ti guiderà attraverso l'installazione e l'uso di questa configurazione.
+Questa è una configurazione per Neovim creata per la programmazione di linguaggi: C / C++, html/css/js, python. Questo documento ti guiderà attraverso l'installazione e l'uso di questa configurazione.
 
 ## Pre requisiti
 
@@ -13,8 +13,9 @@ Prima di procedere, assicurati di avere i seguenti strumenti installati:
 - **<a href="https://nodejs.org/en" target="_blank">Nodejs</a>**: Per il supporto ai plugin che richiedono Node.js.
 - **<a target="_blank" href="https://github.com/BurntSushi/ripgrep">Ripgrep</a>** per la ricerca "grep" con Telescope.
 - Make, **<a href="https://sourceforge.net/projects/gnuwin32" target="_blank">GnuWin32</a>** installato e settato on path.
-- GCC, bisogna avere **<a target="_blank" href="https://www.msys2.org">Mingw</a>** installato e settato on path.
-- Zig, per installarlo andare su **<a target="_blank" href="https://ziglang.org/learn/getting-started/#installing-zig">ZigLang</a>**
+- **<a target="_blank" href="https://winlibs.com/">Mingw</a>** installato e settato on path.
+- **<a target="_blank" href="https://github.com/llvm/llvm-project/releases">Clang</a>** installato e settato on path (consiglio LLVM-version-win64.exe)
+- Clangd, io l'ho installato tramite scoop.
 
 ## Installazione:
 
