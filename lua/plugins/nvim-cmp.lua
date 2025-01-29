@@ -10,7 +10,7 @@ return {
 			"hrsh7th/cmp-path",
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
-			--"hrsh7th/cmp-nvim-lsp-signature-help",
+			"hrsh7th/cmp-nvim-lsp-signature-help",
 		},
 	},
 	{
@@ -124,7 +124,7 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
-					--{ name = "nvim_lsp_signature_help" },
+					{ name = "nvim_lsp_signature_help" },
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "buffer" },

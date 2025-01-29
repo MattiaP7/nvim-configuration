@@ -19,6 +19,7 @@ return {
 
 				-- Altri
 				"dracula",
+				"sorbet",
 			},
 			livePreview = true, -- Preview del tema
 			save_last = true, -- Salva il tema selezionato
