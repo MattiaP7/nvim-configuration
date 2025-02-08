@@ -1,4 +1,3 @@
--- Completitions & Snippet plugin
 return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
@@ -19,7 +18,6 @@ return {
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			require("luasnip.loaders.from_vscode").lazy_load()
-			--require("cmp_nvim_lsp_signature_help").new()
 
 			local kind_icons = {
 				Text = "",
@@ -51,25 +49,8 @@ return {
 			}
 
 			cmp.setup({
-				completition = {
-					completeopt = "menu, menuone, preview",
-				},
-				formatting = {
-					fields = { "kind", "abbr", "menu" },
-					expandable_indicator = true,
-					format = function(entry, vim_item)
-						-- Kind icons
-						vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind) -- This concatenates the icons with the name of the item kind
-						-- If you don't want have the source uncomment this line
-						vim_item.menu = ({
-							buffer = "[Buffer]",
-							nvim_lsp = "[LSP]",
-							luasnip = "[LuaSnip]",
-							nvim_lua = "[Lua]",
-							latex_symbols = "[LaTeX]",
-						})[entry.source.name]
-						return vim_item
-					end,
+				completion = {
+					completeopt = "menu,menuone,noselect",
 				},
 				snippet = {
 					expand = function(args)
@@ -77,30 +58,11 @@ return {
 					end,
 				},
 				window = {
-					completion = {
-						border = "rounded",
-						winhighlight = "Normal:Pmenu,CursorLine:PmenuSel,FloatBorder:FloatBorder,Search:None",
-						col_offset = -3,
-						side_padding = 1,
-						scrollbar = false,
-						scrolloff = 8,
-					},
-					documentation = {
-						border = "rounded",
-						winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,Search:None",
-					},
-				},
-				experimental = {
-					ghost_text = false,
-				},
-				view = {
-					entries = {
-						name = "custom",
-						selection_order = "top_down",
-					},
-					docs = {
-						auto_open = true,
-					},
+					completion = cmp.config.window.bordered({
+						col_offset = -3, -- Sposta il completamento a sinistra
+						side_padding = 0, -- Rimuove il padding laterale
+					}),
+					documentation = false,
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -124,12 +86,18 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp_signature_help" },
-					{ name = "nvim_lsp" },
-					{ name = "luasnip" },
-					{ name = "buffer" },
-					{ name = "path" },
+					{ name = "nvim_lsp" }, -- Usa solo LSP per i suggerimenti
+					{ name = "luasnip" }, -- Usa snippet
+					{ name = "buffer" }, -- Usa il buffer
+					{ name = "path" }, -- Usa i percorsi dei file
 				}),
+				formatting = {
+					fields = { "kind", "abbr" }, -- Mostra solo il tipo e l'abbreviazione
+					format = function(entry, vim_item)
+						vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
+						return vim_item
+					end,
+				},
 			})
 		end,
 	},

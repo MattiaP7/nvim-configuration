@@ -5,11 +5,11 @@ return {
 	config = function()
 		local config = require("nvim-treesitter.configs")
 		config.setup({
-			ensure_installed = { "c", "cpp" }, -- linguaggi default da installare
+			ensure_installed = { "c", "cpp", "lua" }, -- linguaggi default da installare
 			sync_install = false,
 			ignore_install = {},
 			modules = {},
-			auto_install = true,
+			auto_install = false,
 			highlight = {
 				enable = true,
 			},

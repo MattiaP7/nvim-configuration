@@ -5,7 +5,7 @@
 	"A-lettera" => "alt+lettera"
 ]]
 local apk = vim.api.nvim_set_keymap
-local keymap = vim.keymap.set
+local map = vim.keymap.set
 
 apk("n", "<C-a>", "ggVG", { noremap = true, silent = true })
 apk("v", "<C-c>", '"+y', { noremap = true, silent = true })
@@ -19,17 +19,17 @@ apk("v", "<A-Up>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 apk("n", "<A-Down>", ":m+1<CR>==", { noremap = true, silent = true })
 apk("v", "<A-Down>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 
-keymap("n", "<C-z>", "u", { noremap = true })
-keymap("i", "<C-z>", "<Esc>u", { noremap = true })
+map("n", "<C-z>", "u", { noremap = true })
+map("i", "<C-z>", "<Esc>u", { noremap = true })
 
 --Keymap plugin
 
 --Neotree
-keymap("n", "<C-n>", ":Neotree filesystem show<CR>", {})
-keymap("n", "<A-n>", ":Neotree filesystem close<CR>", {})
+map("n", "<C-n>", ":Neotree filesystem show<CR>", {})
+map("n", "<A-n>", ":Neotree filesystem close<CR>", {})
 
 -- Toggleterm
-keymap("n", "<C-t>", ":NeatermToggle <CR>", {})
+map("n", "<C-t>", ":NeatermToggle <CR>", {})
 
 -- Document generator
-keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", { noremap = true, silent = true })
+map("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", { noremap = true, silent = true })
